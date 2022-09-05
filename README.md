@@ -16,7 +16,7 @@ The goal of this project is to show a very simple stripped down version of Redux
 npm i @reduxjs/toolkit react-redux
 ```
 
-#### **STEP 1 - Create your store **
+#### **STEP 1 - Create your store**
 
 * Create a new store in a new file called `store.ts`.
 * Import and create a new store using `configureStore` from `@reduxjs/toolkit`.
@@ -30,7 +30,7 @@ export const store = configureStore({
 });
 ```
 
-#### **STEP 2 - Wrap your app in a Provider **
+#### **STEP 2 - Wrap your app in a Provider**
 
 * Import your `store` from `store.ts` into `main.tsx`.
 
@@ -47,7 +47,7 @@ import { store } from "./redux/store";
 </Provider>
 ```
 
-#### **STEP 3 -  Create your first slice of state **
+#### **STEP 3 -  Create your first slice of state**
 
 * Create a new file called `counterSlice.ts` for your first slice.
 * Create your first slice `counterSlice` using `createSlice` imported from `@reduxjs/toolkit`.
@@ -78,7 +78,7 @@ export const counterSlice = createSlice({
 });
 ```
 
-#### **STEP 4 - Export your getters and actions from your slice **
+#### **STEP 4 - Export your getters and actions from your slice**
 
 * Export your reducer functions from `counterSlice.actions` for your components.
 * Export your state getter `selectCount` for your components.
@@ -92,7 +92,7 @@ export const selectCount = (state: { ['counter']: CounterState }): number => sta
 export default counterSlice.reducer;
 ```
 
-#### **STEP 5 - Import your slice's reducer functions into your store **
+#### **STEP 5 - Import your slice's reducer functions into your store**
 
 * Import `counterReducer` from `counterSlice.ts` into `store.ts`.
 
@@ -110,7 +110,7 @@ export const store = configureStore({
 });
 ```
 
-#### **STEP 6 - Import your slice's getter and actions into your component **
+#### **STEP 6 - Import your slice's getter and actions into your component**
 
 * Create a new component `Counter` in `Counter.tsx`
 * Import `useSelector` from `react-redux` and use it with your getter `selectCount` to store the current value of `count` in a variable.
@@ -137,6 +137,6 @@ const Counter = () => {
 export default Counter;
 ```
 
-#### **STEP 7 - Import your component somewhere in your app **
+#### **STEP 7 - Import your component somewhere in your app**
 
 That's it! Thanks for reading!
